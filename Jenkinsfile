@@ -11,7 +11,7 @@ pipeline {
         stage('start container') {
             steps {
                 sh '/usr/local/bin/docker-compose --version'
-                sh '/usr/local/bin/docker-compose up'
+                sh 'sudo /usr/local/bin/docker-compose up'
                 //sh 'docker-compose ps'
             }
         }
