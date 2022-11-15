@@ -3,8 +3,7 @@ pipeline {
     stages {
         stage("verfiy tooling"){
             steps {
-                sh '''                    
-                    docker-compose version
+                sh '''               
                     curl --version
                     jq --version
                 '''
