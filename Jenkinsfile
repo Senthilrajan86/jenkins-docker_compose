@@ -1,7 +1,7 @@
 pipeline {
     agent any
-    stages("verfiy tooling") {
-        stage {
+    stages {
+        stage("verfiy tooling"){
             steps {
                 sh '''
                     docker info
