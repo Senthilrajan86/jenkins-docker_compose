@@ -4,8 +4,7 @@ pipeline {
         stage("verfiy tooling"){
             steps {
                 sh '''               
-                    curl --version
-                    jq --version
+                    curl --version                    
                 '''
             }
         }    
