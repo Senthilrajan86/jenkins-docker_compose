@@ -10,8 +10,9 @@ pipeline {
         }    
         stage('start container') {
             steps {
-                sh 'docker-compose up'
-                sh 'docker-compose ps'
+                sh '/usr/local/bin/docker-compose --version'
+                //sh 'docker-compose up'
+                //sh 'docker-compose ps'
             }
         }
         stage('Run tests against the container') {
@@ -20,10 +21,10 @@ pipeline {
             }
         }
     }
-    post {
-        always {
-            sh 'docker-compose down'
-            sh 'docker-compose ps'
-        }
-    }
+    //post {
+    //    always {
+      //      sh 'docker-compose down'
+        //    sh 'docker-compose ps'
+        //}
+    //}
 }
