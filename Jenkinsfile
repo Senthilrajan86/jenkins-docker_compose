@@ -10,8 +10,8 @@ pipeline {
         }    
         stage('start container') {
             steps {
-                sh 'docker compose up'
-                sh 'docker compose ps'
+                sh 'docker-compose up'
+                sh 'docker-compose ps'
             }
         }
         stage('Run tests against the container') {
@@ -22,8 +22,8 @@ pipeline {
     }
     post {
         always {
-            sh 'docker compose down'
-            sh 'docker compose ps'
+            sh 'docker-compose down'
+            sh 'docker-compose ps'
         }
     }
 }
