@@ -1,7 +1,7 @@
 pipeline {
     agent any
     stages {
-        stage("verfiy tooling"){
+        stage("verify tooling"){
             steps {
                 sh '''               
                     curl --version                    
@@ -11,7 +11,7 @@ pipeline {
         stage('start container') {
             steps {
                 sh '/usr/local/bin/docker-compose --version'
-                sh '/usr/local/bin/docker-compose up'                
+                sh '/usr/local/bin/docker-compose up -d'                
                 //sh 'docker-compose ps'
             }
         }
