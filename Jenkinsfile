@@ -28,7 +28,7 @@ pipeline {
         }
         stage('Run tests against the container') {
             steps {
-                sh 'docker-compose ps'
+                sh '/usr/local/bin/docker-compose ps'
                 //sh 'curl http://localhost:3000/param?query=demo | jq'
             }
         }
