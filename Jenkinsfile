@@ -12,7 +12,7 @@ pipeline {
             steps {
                 sh '/usr/local/bin/docker-compose ps'
                 //ps -Af | grep "docker-compose" | grep -v grep | awk '{print$2}' | xargs kill -9
-                if pgrep -x docker-compose > /dev/null
+                if pgrep -x docker-compose >/dev/null
                 then                
                 sh '/usr/local/bin/docker-compose down'                
                 fi
