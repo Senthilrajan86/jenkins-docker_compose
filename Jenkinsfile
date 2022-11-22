@@ -12,7 +12,7 @@ pipeline {
             steps {
                 sh '/usr/local/bin/docker-compose ps'
                 script {                
-                    docker ps -q | xargs docker stop
+                    sh'docker ps -q | xargs docker stop'
                 //ps -Af | grep "docker-compose" | grep -v grep | awk '{print$2}' | xargs kill -9
                 //if docker ps -a | grep 'docker_compose_2' | awk '{print $1}'
                     //if pgrep -x "docker_compose_2" >/dev/null
