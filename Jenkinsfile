@@ -34,7 +34,7 @@ pipeline {
         stage('Run tests against the container') {
             steps {
                 sh '/usr/local/bin/docker-compose ps'
-                sh 'docker image prune -af'
+                //sh 'docker image prune -af'
                 //sh 'curl http://localhost:3000/param?query=demo | jq'
             }
         }
